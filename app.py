@@ -26,7 +26,7 @@ def detect_language(text):
     return "de" if sum(1 for w in de_words if w in text.lower()) >= sum(1 for w in en_words if w in text.lower()) else "en"
 
 def generate_ai_response(lead_name, company, job_title, original, reply_text, language):
-    prompt = f"Generate a short LinkedIn reply to: {reply_text}
+    prompt = f"Generate a short LinkedIn reply to: {reply_text}\n\nLead: {lead_name} at {company}"
 
 Lead: {lead_name} at {company}"
     try:
